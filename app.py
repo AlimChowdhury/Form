@@ -127,7 +127,7 @@ def stat():
 def main():
     st.title('Diploma in Data Science Admission')
     selected=st.sidebar.selectbox('Select',
-                        ('-----------',
+                        ('- - - - - -',
                         'Admin',
                         'Registration',
                         'Information',
