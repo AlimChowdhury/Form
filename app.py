@@ -96,11 +96,12 @@ def form():
     with st.form(key='member form'):
         sname=st.text_input('Student Name')
         semail=st.text_input('Student Email')
+        mb=st.text_input('Student Mobile_NO')
         re_date=st.date_input('Registration Date')
         status='In Progress'
         if st.form_submit_button('Submit'):
-            query = f'''INSERT INTO information (id,studentname,email,
-                                                re_date,status) VALUES ('{id}','{sname}','{semail}',
+            query = f'''INSERT INTO information (id,studentname,email,mobile,
+                                                re_date,status) VALUES ('{id}','{sname}','{semail}','{mb}',
                                                 '{re_date}','{status}')'''
             cursor.execute(query)
             db.commit()
